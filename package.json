@@ -26,10 +26,11 @@
     "Sebastian Siemssen <fubhy@fubhy.com>"
   ],
   "scripts": {
+    "bootstrap": "yarn build",
     "clean": "rimraf dist typedocs coverage",
     "prebuild": "rimraf build",
     "build": "tsc && rollup --config",
-    "postbuild": "cp package.json LICENSE README.md dist",
+    "postbuild": "cp package.json ../../LICENSE ../../CODE_OF_CONDUCT.md README.md dist",
     "dev": "jest --watch",
     "prewatch": "cp package.json dist",
     "watch": "tsc --watch",
